@@ -15,3 +15,41 @@ if (obiwanAttack > anakinAttack) {
 } else {
     console.log('Anakin and Obiwan have the same attack.')
 }
+
+let obiwanHealth = 100
+let obiwanDefense = 0
+
+if (obiwanHealth > anakinAttack) {
+    obiwanHealth -= anakinAttack
+    console.log('Obiwans health is now ' + obiwanHealth)
+} else {
+    console.log('Obiwan was slain by Anakin')
+}
+
+obiwanDefense = 30
+
+// let coinFlip = 'heads'
+
+// if(coinFlip !== 'heads') {
+//     console.log('The fight continues!')
+// } else {
+//     console.log('Anakin flees from Obiwan!')
+// }
+
+for(let i = 0; i < 5; i++) {
+    if(obiwanHealth > anakinAttack - obiwanDefense) {
+        obiwanHealth -= anakinAttack - obiwanDefense
+        console.log('Obiwans health is now ' + obiwanHealth)
+    } else {
+        console.log('Obiwan was slain by Anakin')
+    }
+    
+}
+
+while(obiwanHealth > 0) {
+    obiwanHealth -= anakinAttack - obiwanDefense
+    console.log(`Obiwans health is now at ${obiwanHealth}`)
+    if(obiwanHealth <= 0){
+        console.log('Obiwan is part of the living force')
+    }
+}
